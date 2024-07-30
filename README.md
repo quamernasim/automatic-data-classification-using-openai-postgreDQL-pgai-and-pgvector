@@ -1,6 +1,10 @@
 # Automatic Data Classification using OpenAI, PostgreSQL, pgai, and pgvector
 
-In this tutorial, we will demonstrate how to perform automatic data classification using OpenAI, PostgreSQL, pgai, and pgvector. We will use the pgai extension to interact with the OpenAI API and classify product reviews into positive, negative, or neutral categories. We will also use the pgvector extension to generate embeddings for the product reviews and queries and perform a similarity search based on the embeddings. By combining the power of PostgreSQL, pgvector, OpenAI, and pgai, you can build an automated data classification system that can classify text data based on certain criteria.
+Data classification is the process of categorizing data into different classes or categories based on certain criteria. With the ever-increasing volume of data being generated, it has become essential to classify data to make it more manageable, searchable, and secure. By categorizing data, organizations can streamline their data management processes, improve data security, and enhance data analysis capabilities. In this tutorial, we will explore how to perform automatic data classification using OpenAI, PostgreSQL, pgai, and pgvector. Normally these data classification tasks are done using some RAG frameworks like LangChain or Llama-Index but that increases the complexity of the system and also means compromising on the data security. What is you don't have to compromise on the data security and still get the benefits of the RAG framework? That's where the pgai and pgvector comes into play. pgai brings the LLMs closer to the data, removing the dependency on the multiple frameworks and also providing the data security. 
+
+In this tutorial, we will demonstrate how to perform automatic data classification using OpenAI, PostgreSQL, pgai, and pgvector. OpenAI is a leading artificial intelligence research lab that has developed powerful language models such as GPT-3. PostgreSQL is a popular open-source relational database management system that provides advanced features for data storage and retrieval. pgai is an extension for PostgreSQL that enables developers to interact with OpenAI's API or any other AI model directly from the database. pgvector is an extension for PostgreSQL that provides support for vector data types and efficient similarity search capabilities. By combining the power of PostgreSQL, pgai, pgvector, and OpenAI, you can build an automated data classification system that can classify text data based on certain criteria.
+
+Without further ado, let's get started with the tutorial!
 
 # Installation and Setup
 
@@ -82,7 +86,8 @@ CREATE TABLE product_reviews (
     product TEXT,                         -- Name of the product being reviewed
     short_review TEXT,                    -- A brief summary of the review
     review TEXT                           -- The detailed review text
-);
+)
+;
 ```
 
 Let's confirm that the `product_reviews` table has been created successfully by running the following command:
